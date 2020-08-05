@@ -1,0 +1,27 @@
+{
+  "name": "news-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InvNO1247/news-scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InvNO1247/news-scraper/issues"
+  },
+  "homepage": "https://github.com/InvNO1247/news-scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "espress": "0.0.0",
+    "mongoose": "^5.9.27"
+  }
+}
