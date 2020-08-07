@@ -51,15 +51,17 @@ app.get("/scrape", function (req, res) {
             result.teaser = $(this).parent("a").siblings("a").children("p").text();
 
             // Create a new Article using the `result` object built from scraping
-            db.Article.create(result)
-                .then(function (dbArticle) {
-                    // View the added result in the console
-                    console.log(dbArticle);
-                })
-                .catch(function (err) {
-                    // If an error occurred, log it
-                    console.log(err);
-                });
+            if (result.title && result.link && result.teaser) {
+                db.Article.create(result)
+                    .then(function (dbArticle) {
+                        // View the added result in the console
+                        console.log(dbArticle);
+                    })
+                    .catch(function (err) {
+                        // If an error occurred, log it
+                        console.log(err);
+                    });
+            }
         });
 
         // Send a message to the client
